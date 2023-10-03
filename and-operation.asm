@@ -1,0 +1,7 @@
+org 00h
+MOV R0,#30h
+MOV A,@R0
+INC R0
+ANL A,@R0
+MOV 40h,A
+END

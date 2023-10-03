@@ -1,0 +1,14 @@
+org 00h
+MOV R0,#30h
+MOV R2,#05h
+MOV A,@R0
+MOV 20h,A
+UP:INC R0
+CLR C
+SUBB A,@R0
+JNC:skip
+MOV A,@R0
+MOV 20h,A
+skip:MOV A,20h
+DJNZ R2,UP
+END

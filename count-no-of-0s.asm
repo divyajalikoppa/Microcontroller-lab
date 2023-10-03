@@ -1,0 +1,11 @@
+org 00h
+MOV R2,#08h
+MOV R0,#30h
+MOV A,@R0
+CLR C
+back:RRC A
+JNC S1
+SJMP S2
+S1:INC R1
+S2:DJNZ R2,back
+END
